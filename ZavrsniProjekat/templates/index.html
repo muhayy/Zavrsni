@@ -1,0 +1,310 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%include 'head.html'%}
+</head>
+<body>
+   
+   <div class="header">
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="home"><img class="slikica" src="{% static 'images/images/logoooo.png'%}" width="150px"></a>
+              </div>
+              <nav>
+                <ul id="MenuItems">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="products">Proizvodi</a></li>
+                    <li><a href="about">O nama</a></li>
+                    <li><a href="coupons">Vaučeri</a></li>
+                    <li><a href="account">Profil</a></li>
+                </ul>
+              </nav>
+              <a href="cart"><img src="{% static 'images/images/cart.png'%}" width="30px" height="30px"></a>
+              <img src="{% static 'images/images/menu.png'%}" onclick="menutoggle()" class="menu-icon">
+          </div>
+           <div class="row">
+                <div class="col-2">
+                    <h1>Opustite Se Uz<br>Healing Masaže!</h1>
+                    <p>Oslobodite se stresa i povratite blagodato stanje tijela sa našim masažama.<br>Masaže se izvode od strane stručnih fizioterapeuta.</p>
+                    <a href="about" class="btn">Istražite Više! &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img class="yoga-girl" src="{% static 'images/images/mainslikica.png' %}">
+                </div>
+               
+           </div>
+           
+       </div>
+       </div>
+
+     <div class="categories">
+         <div class="small-container">
+           <div class="row">
+               <div class="col-3">
+                   <img class="slike" src="{% static 'images/images/slika1.jpg'%}">
+               </div> 
+               <div class="col-3">
+                  <img class="slike" src="{% static 'images/images/slika2.jpg'%}">
+               </div> 
+               <div class="col-3">
+                   <img class="slike" src="{% static 'images/images/slika3.jpg'%}">
+               </div> 
+           </div>
+       </div>
+     </div>
+  
+  
+  <div class="small-container">
+        <h2 class="title">Istaknuti Proizvodi</h2>
+           <div class="row">
+               <div class="col-4">
+                   
+                   <a href="frankincense_essential_oil"><img class="main-detail-slika" src="{% static 'images/images/proizvod1.jpg'%}"></a>
+                   <h4><a href="frankincense_essential_oil">Frankincense Essential Oil</a></h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>25KM</p>
+               </div> 
+               <div class="col-4">
+                <a href="lemon-essential-oil"><img class="main-detail-slika" src="{% static 'images/images/proizvod2.jpg' %}"></a>
+                   <h4><a href="lemon-essential-oil"></a>Lemon Essential Oil</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>11KM</p>
+               </div> 
+               <div class="col-4">
+                <a href="ricinusovo-ulje"><img class="main-detail-slika" src="{% static 'images/images/proizvod3.jpg' %}"></a>
+                   <h4><a href="ricinusovo-ulje"></a>Ricinusovo Ulje</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>16KM</p>
+               </div> 
+                <div class="col-4">
+                    <a href="ulje-od-sjemenki-grozda"><img class="main-detail-slika" src="{% static 'images/images/proizvod4.jpg' %}"></a>
+                   <h4><a href="ulje-od-sjemenki-grozda"></a>Ulje od Sjemenki Grožđa</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>45KM</p>
+               </div> 
+           </div>
+        <h2 class="title">Najnoviji Proizvodi</h2>
+             <div class="row">
+               <div class="col-4">
+                <a href="setovi-difuzora-aroma-trske"><img class="main-detail-slika" src="{% static 'images/images/proizvod5.jpg' %}"></a>
+                   <h4><a href="setovi-difuzora-aroma-trske"></a>Setovi Difuzora Aroma Trske</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>50KM</p>
+               </div> 
+               <div class="col-4">
+                <a href="himalajska-ruzicasta-sol-za-kupku"><img class="main-detail-slika" src="{% static 'images/images/proizvod6.jpg' %}"></a>
+                   <h4><a href="himalajska-ruzicasta-sol-za-kupku"></a>Himalajska Ruzičasta Sol za Kupku</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>35KM</p>
+               </div> 
+               <div class="col-4">
+                <a href="herbal-glo-vitamin-c-losion"><img class="main-detail-slika" src="{% static 'images/images/proizvod7.jpg' %}"></a>
+                   <h4><a href="herbal-glo-vitamin-c-losion"></a>Herbal Glo Vitamin C Losion za Ruke i Tijelo</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>24KM</p> 
+               </div> 
+                <div class="col-4">
+                    <a href="ulje-jojobe"><img class="main-detail-slika" src="{% static 'images/images/proizvod8.jpg' %}"></a>
+                   <h4><a href="ulje-jojobe"></a>Ulje Jojobe</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>38KM</p>
+               </div> 
+           </div>
+           <div class="row">
+               <div class="col-4">
+                <a href="avokado-ulje"><img class="main-detail-slika" src="{% static 'images/images/proizvod9.jpg' %}"></a>
+                   <h4><a href="avokado-ulje"></a>Avokado Ulje</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>25KM</p> 
+               </div> 
+               <div class="col-4">
+                <a href="masazno-ulje-kamelije"><img class="main-detail-slika" src="{% static 'images/images/proizvod10.jpg' %}"></a>
+                   <h4><a href="masazno-ulje-kamelije"></a>Masažno Ulje Kamelije</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>45KM</p>
+               </div> 
+               <div class="col-4">
+                <a href="kokosovo-ulje"><img class="main-detail-slika" src="{% static 'images/images/proizvod11.jpg' %}"></a>
+                   <h4><a href="kokosovo-ulje"></a>Kokosovo Ulje</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                   </div>
+                   <p>60KM</p>
+               </div> 
+                <div class="col-4">
+                    <a href="etericno-ulje-bosiljka"><img class="main-detail-slika" src="{% static 'images/images/proizvod12.jpg' %}"></a>
+                   <h4><a href="etericno-ulje-bosiljka"></a>Eterično Ulje Bosiljka</h4>
+                   <div class="rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                   </div>
+                   <p>33KM</p>
+               </div> 
+           </div>
+       </div>
+       
+  
+   <div class="offer">
+       <div class="small-container">
+           <div class="row">
+           <div class="col-2">
+            <a href="coupons"><img class="offerslika" src="{% static 'images/images/exclusive.jpg'%}"></a>
+           </div>
+           <div class="col-2">
+               <p>Nova Ponuda</p>
+               <h1>Gift Vaučeri</h1>
+               <small>Obradujte najmilije uz gift vaučer za Healing masažu!</small>
+               <br>
+               <a href="coupons" class="btn">Istraži Više! &#8594;</a>
+           </div>
+       </div>
+       </div>
+       
+   </div>
+   
+  
+   <div class="testimonial">
+       <div class="small-container">
+       <div class="row">
+           <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                      <div class="rating-test">
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                       </div>
+                       <img src="{% static 'images/images/user22.jpg' %}">
+                       <h3>Merjem Youssef</h3>
+           </div>
+            <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                      <div class="rating-test">
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                       </div>
+                       <img src="{% static 'images/images/user11.jpg' %}">
+                       <h3>Abdullah Youssef</h3>
+           </div>
+            <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                      <div class="rating-test">
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                       </div>
+                       <img src="{% static 'images/images/user33.jpg' %}">
+                       <h3>Šida Youssef</h3>
+           </div>
+       </div>
+       </div>
+   </div>
+  
+
+
+{%include 'footer.html'%}
+
+
+<script>
+    
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }else
+            {
+                MenuItems.style.maxHeight = "0px"
+            } 
+    }
+    
+</script>
+
+
+
+</body>
+</html>
+
